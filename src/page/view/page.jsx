@@ -6,7 +6,6 @@ import commonMixin from '../utils/mixin';
 import Actions from '../utils/actions';
 import DataStore from '../utils/store';
 
-
 export default class Page extends Reflux.Component{
 
     constructor(props){
