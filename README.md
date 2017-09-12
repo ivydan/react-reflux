@@ -14,11 +14,15 @@ Project is running at http://localhost:8080/common/page.html
 #### 实例：
 
 import React from 'react';
+
 import Reflux from 'reflux';
+
 import ReactMixin from 'react-mixin';
 
 import commonMixin from '../utils/mixin';
+
 import Actions from '../utils/actions';
+
 import DataStore from '../utils/store';
 
 export default class Page extends Reflux.Component{
@@ -48,13 +52,17 @@ ReactMixin.onClass(Page, commonMixin);
 
 #### 实例：
 import React from 'react';
+
 import Reflux from 'reflux';
+
 import ReactMixin from 'react-mixin';
 
 //或者匿名
+
 var actions = Reflux.createActions(["addItem","deleteItem"]);
 
 //Store
+
 var store = Reflux.createStore({
 
     listenables: actions, //更加简洁的写法
@@ -101,4 +109,5 @@ export default class Page extends React.Component{
 }
 
 ReactMixin.onClass(Page, Reflux.connect(store,"addItem"));
+
 ReactMixin.onClass(Page, Reflux.connect(store,"deleteItem"));
