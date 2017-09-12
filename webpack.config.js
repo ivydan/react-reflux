@@ -16,14 +16,14 @@ var getEntry = function(){
         var n = name.slice(name.lastIndexOf('src/') + 4, name.length - 3);
         n = n.slice(0, n.lastIndexOf('/'));
         entry[n] = name;
-        commonPlugins.push(
-            new HtmlWebpackPlugin({
-                title:n,
-                filename: `${n}/index.html`,
-                template: 'common/index.html',
-                inject: 'body'
-            })
-        )
+        // commonPlugins.push(
+        //     new HtmlWebpackPlugin({
+        //         title:n,
+        //         filename: `${n}/index.html`,
+        //         template: 'common/index.html',
+        //         inject: 'body'
+        //     })
+        // )
     });
     return entry;
 }
