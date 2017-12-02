@@ -15,6 +15,8 @@ export default class Page extends Reflux.Component{
     }
 
     componentDidMount(){
+        console.log(this.state);
+        debugger;
         Actions.handleChangeName("www");
     }
     
